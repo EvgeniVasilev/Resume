@@ -1,0 +1,12 @@
+<div>
+	<h3>Projects: </h3>
+	<div  class="col-lg-12" ng-repeat="data in projects">
+	{{$index + 1}}.
+		<span ng-repeat="(key,value) in data">			
+				<a ng-href="{{key}}">{{value}}</a>					
+		</span>
+		<br/>
+		<br/>
+	</div>
+	<b><p>GitHub Repository: </p></b><a ng-href="https://github.com/EvgeniVasilev">https://github.com/EvgeniVasilev</p>
+</div>

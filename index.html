@@ -1,153 +1,242 @@
 <!DOCTYPE html>
 <html ng-app="resumeApp">
+
 <head>
-    <title>Resume</title>
-    <meta charset="UTF-8"/>
-    <!--angular-->
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <!--router-->
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-    <script type="text/javascript">
-        var resumeApp = angular.module("resumeApp", ['ngRoute']);
-        resumeApp.controller("personalDetails", personalDetails);
+	<title>Resume</title>
+	<meta charset="UTF-8" />
+	<!--angular-->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<!--router-->
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript">
+		var resumeApp = angular.module("resumeApp", ['ngRoute']);
+		resumeApp.controller("personalDetails", personalDetails);
 
-        function personalDetails($scope) {
-            $scope.personal = [
-                {"1. Full Name:": "Evgeni Georgiev  Vasilev"},
-                {"2. Address: ": "City of Pernik"},
-                {"3. GSM: ": "0898/ 93-81-93"},
-                {"4. E-mail: ": "evgeni.vasilev0912gmail.com"}
+		function personalDetails($scope) {
+			$scope.personal = [
+				{
+					"1. Full Name:": "Evgeni Georgiev  Vasilev"
+				},
+				{
+					"2. Address: ": "City of Pernik"
+				},
+				{
+					"3. GSM: ": "0898/ 93-81-93"
+				},
+				{
+					"4. E-mail: ": "evgeni.vasilev0912gmail.com"
+				}
             ];
-            $scope.education = [
-                {"1. Master Degree in Psychology: ": "University of Sofia – 'Snt. Climent Ohridski'"},
-                {"2. High School: ": "Nature and Mathematics - 'Hristo Smirnenski - Pernik'"},
-                {"3. Certification and Diplomas:  ": "Microsoft Specialist: »»  1. Certification Number : E842-7422 »»    2. Certification/Version: Programming in HTML5 with JavaScript and CSS3   Specialist"}
+			$scope.education = [
+				{
+					"1. Master Degree in Psychology: ": "University of Sofia – 'Snt. Climent Ohridski'"
+				},
+				{
+					"2. High School: ": "Nature and Mathematics - 'Hristo Smirnenski - Pernik'"
+				},
+				{
+					"3. Certification and Diplomas:  ": "Microsoft Specialist: »»  1. Certification Number : E842-7422 »»    2. Certification/Version: Programming in HTML5 with JavaScript and CSS3   Specialist"
+				}
             ]
-            $scope.experience = [
-                {"1. Aviation Security Officer: ": "Airport Sofia – 2002/2009"},
-                {"2. On-air Broadcast Technician and Web Site Administrator: " : "Local Cable TV Network – Pernik 2009/2011"},
-                {"3. Freelance Web Development: ": "2011 – 2013"},
-                {"4. Web Developer – term contract: ": "Web Factory 2013 – June/July"},
-                {"5. Freelance Web Development: ": "2013 – July/ 2014 – January"},
-                {"6. PHP Web Development: ": "Support BG 2014 – January – March"},
-                {"7. Senior Front-end Developer: ": "GDMFX: 2014 August – 2015 February"},
+			$scope.experience = [
+				{
+					"1. Aviation Security Officer: ": "Airport Sofia – 2002/2009"
+				},
+				{
+					"2. On-air Broadcast Technician and Web Site Administrator: ": "Local Cable TV Network – Pernik 2009/2011"
+				},
+				{
+					"3. Freelance Web Development: ": "2011 – 2013"
+				},
+				{
+					"4. Web Developer – term contract: ": "Web Factory 2013 – June/July"
+				},
+				{
+					"5. Freelance Web Development: ": "2013 – July/ 2014 – January"
+				},
+				{
+					"6. PHP Web Development: ": "Support BG 2014 – January – March"
+				},
+				{
+					"7. Senior Front-end Developer: ": "GDMFX: 2014 August – 2015 February"
+				},
             ]
-            $scope.skills = [
-                {"1. Hyper Text Markup  Languages:  ": "HTML – 4.1, HTML – 5, XML"},
-                {"2. Style Sheet Languages: ": "CSS – 2.1, CSS – 3"},
-                {"3. Client Side Scripts: ": "JavaScript – Procedural and OOP, AJAX jQuery, jQuery Mobile, DOM Scripting, JSON, Angular.js"},
-                {"4. Server Side Scripts: ": "PHP – Procedural and OOP, MVC Architecture"},
-                {"5. Database: ": "MySql"},
-                {"6. Web Graphics and Design: ": "Macromedia Fireworks"},
-                {"7. Version Control System: ": "GIT"},
-                {"8. Compound Front – end Frameworks: ": "Twitter Bootstrap"},
-                {"9. Other Technologies: ": "Sass, Apache Cordova, Vagrant, Flash, Drupal"},
-                {"10. Integrated Development Enviornment: ": "PHP Storm, NetBeans, Visual Studio"},
-                {"11. OS:" : "Windows 8.1 (preferred), Linux – Ubuntu Distribution"}
-                
-            ];
-            $scope.languages = [
-                {"English language: " : "IELTS Certificate"},
-                {"Russian Language: " : "Speak and read"}
-            ];
-            $scope.projects = [
-                {"http://www.be-web.bg": "www.be-web.bg"},
-                {"http://www.greenlifehotel-bansko.bg" : "www.greenlifehotel-bansko.bg"},
-                {"http://www.gdmfx.com" : "www.gdmfx.com"},
-                {"http://www.gdmfx.com/promo-binary-options" : "www.gdmfx.com/promo-binary-options"},
-                {"http://www.gdmfx.com/demo-trading-account" : "www.gdmfx.com/demo-trading-account"},
-                {"http://evgenivasilev.github.io/Angular-Single-Page-Sample/" : "http://evgenivasilev.github.io/agular-Single-Page-Sample/"},
-                {"http://evgenivasilev.github.io/Geolocation-Sample/" : "http://evgenivasilev.github.io/Geolocation-Sample/"},
-                {"http://evgenivasilev.github.io/Vanila-JS-Form-Validation/" : "http://evgenivasilev.github.io/Vanila-JS-Form-Validation/"},
-                {"http://evgenivasilev.github.io/jQuery-Sample-for-Building-Simple-Equation-Test/" : "http://evgenivasilev.github.io/jQuery-Sample-for-Building-Simple-Equation-Test/"},
-                {"http://evgenivasilev.github.io/Horizontal-Bar-Chart/" : "http://evgenivasilev.github.io/Horizontal-Bar-Chart/"}, 
-                {"http://evgenivasilev.github.io/OOP-JavaSCript-Sample/" : "http://evgenivasilev.github.io/OOP-JavaSCript-Sample/"},
-                {"http://evgenivasilev.github.io/Angular-To-Do-Application/" : "http://evgenivasilev.github.io/Angular-To-Do-Application/"},
-                {"http://evgenivasilev.github.io/Web-Form/" : "http://evgenivasilev.github.io/Web-Form/"},
-                {"http://evgenivasilev.github.io/BPI/" : "http://evgenivasilev.github.io/BPI/"},
-                {"http://evgenivasilev.github.io/Flash-Weather-Application/" : "http://evgenivasilev.github.io/Flash-Weather-Application/"},
-                {"http://evgenivasilev.github.io/Angular-Form-Validation/" : "http://evgenivasilev.github.io/Angular-Form-Validation/"}
-            ]            
-            
-        }
+			$scope.skills = [
+				{
+					"1. Hyper Text Markup  Languages:  ": "HTML – 4.1, HTML – 5, XML"
+				},
+				{
+					"2. Style Sheet Languages: ": "CSS – 2.1, CSS – 3"
+				},
+				{
+					"3. Client Side Scripts: ": "JavaScript – Procedural and OOP, AJAX jQuery, jQuery Mobile, DOM Scripting, JSON, Angular.js"
+				},
+				{
+					"4. Server Side Scripts: ": "PHP – Procedural and OOP, MVC Architecture"
+				},
+				{
+					"5. Database: ": "MySql"
+				},
+				{
+					"6. Web Graphics and Design: ": "Macromedia Fireworks"
+				},
+				{
+					"7. Version Control System: ": "GIT"
+				},
+				{
+					"8. Compound Front – end Frameworks: ": "Twitter Bootstrap"
+				},
+				{
+					"9. Other Technologies: ": "Sass, Apache Cordova, Vagrant, Flash, Drupal"
+				},
+				{
+					"10. Integrated Development Enviornment: ": "PHP Storm, NetBeans, Visual Studio"
+				},
+				{
+					"11. OS:": "Windows 8.1 (preferred), Linux – Ubuntu Distribution"
+				}
 
-        resumeApp.config(['$routeProvider',
+            ];
+			$scope.languages = [
+				{
+					"English language: ": "IELTS Certificate"
+				},
+				{
+					"Russian Language: ": "Speak and read"
+				}
+            ];
+			$scope.projects = [
+				{
+					"http://www.be-web.bg": "www.be-web.bg"
+				},
+				{
+					"http://www.greenlifehotel-bansko.bg": "www.greenlifehotel-bansko.bg"
+				},
+				{
+					"http://www.gdmfx.com": "www.gdmfx.com"
+				},
+				{
+					"http://www.gdmfx.com/promo-binary-options": "www.gdmfx.com/promo-binary-options"
+				},
+				{
+					"http://www.gdmfx.com/demo-trading-account": "www.gdmfx.com/demo-trading-account"
+				},
+				{
+					"http://evgenivasilev.github.io/Angular-Single-Page-Sample/": "http://evgenivasilev.github.io/agular-Single-Page-Sample/"
+				},
+				{
+					"http://evgenivasilev.github.io/Geolocation-Sample/": "http://evgenivasilev.github.io/Geolocation-Sample/"
+				},
+				{
+					"http://evgenivasilev.github.io/Vanila-JS-Form-Validation/": "http://evgenivasilev.github.io/Vanila-JS-Form-Validation/"
+				},
+				{
+					"http://evgenivasilev.github.io/jQuery-Sample-for-Building-Simple-Equation-Test/": "http://evgenivasilev.github.io/jQuery-Sample-for-Building-Simple-Equation-Test/"
+				},
+				{
+					"http://evgenivasilev.github.io/Horizontal-Bar-Chart/": "http://evgenivasilev.github.io/Horizontal-Bar-Chart/"
+				},
+				{
+					"http://evgenivasilev.github.io/OOP-JavaSCript-Sample/": "http://evgenivasilev.github.io/OOP-JavaSCript-Sample/"
+				},
+				{
+					"http://evgenivasilev.github.io/Angular-To-Do-Application/": "http://evgenivasilev.github.io/Angular-To-Do-Application/"
+				},
+				{
+					"http://evgenivasilev.github.io/Web-Form/": "http://evgenivasilev.github.io/Web-Form/"
+				},
+				{
+					"http://evgenivasilev.github.io/BPI/": "http://evgenivasilev.github.io/BPI/"
+				},
+				{
+					"http://evgenivasilev.github.io/Flash-Weather-Application/": "http://evgenivasilev.github.io/Flash-Weather-Application/"
+				},
+				{
+					"http://evgenivasilev.github.io/Angular-Form-Validation/": "http://evgenivasilev.github.io/Angular-Form-Validation/"
+				}
+            ]
+
+		}
+
+		resumeApp.config(['$routeProvider',
             function ($routeProvider) {
-                $routeProvider.
-                        when('/', {
-                            templateUrl: 'partials/personals.html'
-                        }).
-                        when('/education', {
-                            templateUrl: 'partials/education.html'
-                        }).
-                        when('/experience', {
-                            templateUrl: "partials/experience.html"
-                        })
-                        .when('/skills', {
-                            templateUrl: "partials/skills.html"
-                        }).
-                        when('/languages', {
-                            templateUrl: "partials/languages.html"
-                        }).
-                        when('/projects',{
-                            templateUrl: 'partials/projects.html'
-                        }).
-                        otherwise({
-                            redirectTo: '/'
-                        });
+				$routeProvider.
+				when('/', {
+					templateUrl: 'partials/personals.html'
+				}).
+				when('/education', {
+					templateUrl: 'partials/education.html'
+				}).
+				when('/experience', {
+						templateUrl: "partials/experience.html"
+					})
+					.when('/skills', {
+						templateUrl: "partials/skills.html"
+					}).
+				when('/languages', {
+					templateUrl: "partials/languages.html"
+				}).
+				when('/projects', {
+					templateUrl: 'partials/projects.html'
+				}).
+				otherwise({
+					redirectTo: '/'
+				});
             }]);
-    </script>
-    <!--css-->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-        }
-
-        p {
-            font-size: 15px;
-        }
-
-        .offset-top{
-            position: relative;
-            top: 10px;
-        }
-    </style>
+	</script>
+	<!--css-->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<style>
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		
+		p {
+			font-size: 15px;
+		}
+		
+		.offset-top {
+			position: relative;
+			top: 10px;
+		}
+	</style>
 </head>
-<body>
-<div class="container" ng-controller="personalDetails">
-    <div class="row page-header">
-        <div class="col-lg-6">
-            <h3>RESUME</h3>
-        </div>
-        <div class="col-lg-6">
-        <h4 class="pull-right offset-top">Subject:<span>&nbsp; JavaScript Application Developer</span></h4>
-        </div>
-    </div>
-    <div>
-     <div class="row">
-            <b>Source Code on GitHub:</b>   
-            <a href="https://github.com/EvgeniVasilev/Resume">github.com/EvgeniVasilev/Resume</a>    
-    </div>
-        <br/>
-        <a href="#/">Personal Details</a>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="#education">Education</a>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="#experience">Work Experience</a>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="#skills">Computer Skills</a>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="#languages">Languages</a>
-        <span>&nbsp;|&nbsp;</span>
-        <a href="#projects">Projects</a>
-    </div>
-    <br/>
-    <br/>
 
-    <div class="row well">
-        <div ng-view=""></div>
-    </div>
-</div>
+<body>
+	<div class="container" ng-controller="personalDetails">
+		<div class="row page-header">
+			<div class="col-lg-6">
+				<h3>RESUME</h3>
+			</div>
+			<div class="col-lg-6">
+				<h4 class="pull-right offset-top">Subject:<span>&nbsp; JavaScript Application Developer</span></h4>
+			</div>
+		</div>
+		<div>
+			<div class="row">
+				<b>Source Code on GitHub:</b>
+				<a target="_blank" href="https://github.com/EvgeniVasilev/Resume">github.com/EvgeniVasilev/Resume</a>
+			</div>
+			<br/>
+			<a href="#/">Personal Details</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a href="#education">Education</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a href="#experience">Work Experience</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a href="#skills">Computer Skills</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a href="#languages">Languages</a>
+			<span>&nbsp;|&nbsp;</span>
+			<a href="#projects">Projects</a>
+		</div>
+		<br/>
+		<br/>
+
+		<div class="row well">
+			<div ng-view=""></div>
+		</div>
+	</div>
 </body>
+
 </html>

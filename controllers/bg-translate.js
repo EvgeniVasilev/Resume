@@ -39,6 +39,6 @@ resumeApp.config(['$routeProvider',
 
 		}).
 		otherwise({
-			redirectTo: '/bg'
+			redirectTo: '/en'
 		});
             }]);

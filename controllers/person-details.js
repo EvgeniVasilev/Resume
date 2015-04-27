@@ -13,11 +13,15 @@ function personalDetails($scope, $window) {
 	$scope.subject = "Subject:";
 	$scope.jspa = "JavaScript Application Developer";
 
+	$window.onload = function () {
+		if ($scope.lng === "en") {
+			$window.location = "./#/" + $scope.lng;
+		}
+	}
 
 	$scope.change = function () {
 		// $window.location = "./index.html#/" + $scope.lng;
 		$window.location = "./#/" + $scope.lng;
-
 
 		if ($scope.lng === "bg") {
 			$scope.resume = "Автобиография";
@@ -31,7 +35,7 @@ function personalDetails($scope, $window) {
 			$scope.subject = "Относно:";
 			$scope.jspa = "JavaScript Разработчик на Приложения";
 
-		} else {
+		} else if ($scope.lng = "en") {
 			$scope.resume = "Resume";
 			$scope.pDetails = "Personal Details";
 			$scope.edu = "Education";
@@ -43,6 +47,7 @@ function personalDetails($scope, $window) {
 			$scope.subject = "Subject:";
 			$scope.jspa = "JavaScript Application Developer";
 		}
+
 	}
 	$scope.personal = [
 		{

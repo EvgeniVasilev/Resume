@@ -15,7 +15,7 @@ function personalDetails($scope, $window) {
 
 
 	$scope.change = function () {
-		$window.location = "./index.html#/" + $scope.lng;
+		$window.location = "./Resume/#/" + $scope.lng;
 
 
 		if ($scope.lng === "bg") {

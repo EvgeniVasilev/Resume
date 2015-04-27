@@ -15,7 +15,7 @@ function personalDetails($scope, $window) {
 
 
 	$scope.change = function () {
-		$window.location = "./#/" + $scope.lng;
+		$window.location = $window.location.href + "#/" + $scope.lng;
 
 
 		if ($scope.lng === "bg") {

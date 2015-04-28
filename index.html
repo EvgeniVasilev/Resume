@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
 	<script type="text/javascript" src="controllers/bg-translate.js"></script>
-	<script type="text/javascript" src="controllers/person-details.js"></script>
+	<script type="text/javascript" src="controllers/main-ctrl.js"></script>
 	<!--css-->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 	<style>
@@ -53,36 +53,36 @@
 							<option value="en">English</option>
 							<option value="bg">Bulgarian</option>
 						</select>
-						</di>
 					</div>
 				</div>
-				<br/>
-				<br/>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#/{{lng}}" ng-bind="pDetails"></a>
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#education/{{lng}}" ng-bind="edu"></a>
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#experience/{{lng}}" ng-bind="workExpr"></a>
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#skills/{{lng}}" ng-bind="cSkills"></a>
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#languages/{{lng}}" ng-bind="speakLang">speakLang</a>
-					<span>&nbsp;|&nbsp;</span>
-					<a href="#projects/{{lng}}" ng-bind="pProjects"></a>
-					<span>&nbsp;|&nbsp;</span>
-				</div>
 			</div>
 			<br/>
 			<br/>
-
-			<div class="row well">
-				<div data-ng-view=""></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#/{{lng}}" ng-bind="pDetails"></a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#education/{{lng}}" ng-bind="edu"></a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#experience/{{lng}}" ng-bind="workExpr"></a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#skills/{{lng}}" ng-bind="cSkills"></a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#languages/{{lng}}" ng-bind="speakLang">speakLang</a>
+				<span>&nbsp;|&nbsp;</span>
+				<a href="#projects/{{lng}}" ng-bind="pProjects"></a>
+				<span>&nbsp;|&nbsp;</span>
 			</div>
 		</div>
+		<br/>
+		<br/>
+
+		<div class="row well">
+			<div data-ng-view=""></div>
+		</div>
+	</div>
 </body>
 
 </html>

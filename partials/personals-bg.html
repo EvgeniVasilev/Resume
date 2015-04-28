@@ -1,1 +1,9 @@
 <h3>Лични Данни</h3>
+<div class="col-lg-12" ng-repeat="data in personalBg">
+	<div ng-repeat="(key, value) in data">
+		<p style="text-decoration: underline">{{key}}</p>
+
+		<p><b>{{value}}</b>
+		</p>
+	</div>
+</div>

@@ -1,1 +1,13 @@
-<h3>Проекти</h3>
+<div>
+	<h3>Проекти: </h3>
+	<div class="col-lg-12" ng-repeat="data in projectsBg">
+		{{$index + 1}}.
+		<span ng-repeat="(key,value) in data">			
+				<a target="_blank" ng-href="{{key}}">{{value}}</a>					
+		</span>
+		<br/>
+		<br/>
+	</div>
+	<b><p>GitHub Хранилище: </p></b>
+	<a target="_blank" ng-href="https://github.com/EvgeniVasilev">https://github.com/EvgeniVasilev</a>
+</div>

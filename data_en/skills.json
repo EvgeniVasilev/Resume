@@ -1,0 +1,36 @@
+ [
+ 	{
+ 		"1. Hyper Text Markup  Languages:  ": "HTML – 4.1, HTML – 5, XML"
+				},
+ 	{
+ 		"2. Style Sheet Languages: ": "CSS – 2.1, CSS – 3"
+				},
+ 	{
+ 		"3. Client Side Scripts: ": "JavaScript – Procedural and OOP, AJAX jQuery, jQuery Mobile, DOM Scripting, JSON, Angular.js"
+				},
+ 	{
+ 		"4. Server Side Scripts: ": "PHP – Procedural and OOP, MVC Architecture"
+				},
+ 	{
+ 		"5. Database: ": "MySql"
+				},
+ 	{
+ 		"6. Web Graphics and Design: ": "Macromedia Fireworks"
+				},
+ 	{
+ 		"7. Version Control System: ": "GIT"
+				},
+ 	{
+ 		"8. Compound Front – end Frameworks: ": "Twitter Bootstrap"
+				},
+ 	{
+ 		"9. Other Technologies: ": "Sass, Apache Cordova, Vagrant, Flash, Drupal"
+				},
+ 	{
+ 		"10. Integrated Development Enviornment: ": "PHP Storm, NetBeans, Visual Studio"
+				},
+ 	{
+ 		"11. OS:": "Windows 8.1 (preferred), Linux – Ubuntu Distribution"
+				}
+
+]
